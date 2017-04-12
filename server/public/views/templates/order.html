@@ -1,7 +1,7 @@
 <p>Order Page</p>
 
 
-<form ng-click="" ng-submit="order.logPizza(order)">
+<form ng-submit="order.addPizza(order)">
   <div class="">
     <label for="size">Size</label>
     Small<input type="radio" name="size" value="small" ng-model="order.size">
@@ -19,9 +19,10 @@
   Pineapple<input type="checkbox" name="size" value="pineapple" ng-model="order.toppings.pineapple">
 </div>
 
-<input type="submit" name="" value="Submit">
-
+<input type="submit" name="" value="Add Pizza">
 </form>
+
+
 
 <p>{{order.size}}</p>
 <p>{{order.toppings}}</p>

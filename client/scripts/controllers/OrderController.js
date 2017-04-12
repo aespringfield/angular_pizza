@@ -1,5 +1,5 @@
 // var myApp = angular.module('myApp', ['ngRoute']);'
-myApp.controller('OrderController', [ function(){
+myApp.controller('OrderController', ['PizzaOvenService', function(PizzaOvenService){
   console.log("inside OrderController");
 
   var order = this;
@@ -9,9 +9,6 @@ myApp.controller('OrderController', [ function(){
     toppings: []
   };
 
-  order.logPizza = function(pizza) {
-    console.log(pizza);
-  };
-
+  order.addPizza = PizzaOvenService.addPizza;
 
 }]);
