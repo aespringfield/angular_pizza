@@ -6,3 +6,12 @@
 .order {
   height: 250px;
 }
+
+.navbar-btn {
+  min-width: 120px;
+}
+
+a {
+  color: white;
+
+}
