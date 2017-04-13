@@ -8,8 +8,15 @@ var addPizza = function(pizza) {
 
   console.log(pizzaObject);
 };
+
+var deletePizza = function($index) {
+  console.log($index);
+  pizzaObject.pizzasArray.slice($index, 1);
+};
+
   return {
     addPizza : addPizza,
-    pizzaObject : pizzaObject
+    pizzaObject : pizzaObject,
+    deletePizza : deletePizza
   };
 });
