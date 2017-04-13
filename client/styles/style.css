@@ -12,3 +12,15 @@
   text-align: center;
   background-image: url(https://www.colourbox.com/preview/2441107-old-red-bricks-wall-grunge-background.jpg);
 }
+
+.orderPage {
+  text-align: center;
+}
+
+.orderPage h2 {
+  font-size: 50px;
+}
+
+.form-group {
+  font-size: 25px;
+}
