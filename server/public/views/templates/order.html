@@ -1,28 +1,31 @@
-<p>Order Page</p>
+<div class="container orderPage">
+  <h2>Start Your Order</h2>
 
+<div class="well">
+  <form ng-submit="order.addAndClear(order)">
+    <div class="form-group">
+      <label for="size"> Select Your Pizza Size</label>
+      <br>
+      <input type="radio" name="size" value="small" ng-model="order.size"> Small $6
+      <input type="radio" name="size" value="medium" ng-model="order.size"> Medium $7
+      <input type="radio" name="size" value="large" ng-model="order.size"> Large $8
+    </div>
 
-<form ng-submit="order.addAndClear(order)">
-  <div class="">
-    <label for="size">Size</label>
-    Small<input type="radio" name="size" value="small" ng-model="order.size">
-    Medium<input type="radio" name="size" value="medium" ng-model="order.size">
-    Large<input type="radio" name="size" value="large" ng-model="order.size">
+  <div class="form-group">
+    <label for="size">Select Your Toppings ($1 Each)</label>
+    <br>
+    <input type="checkbox" name="size" value="pepperoni" ng-model="order.toppings.pepperoni"> Pepperoni
+    <input type="checkbox" name="size" value="sausage" ng-model="order.toppings.sausage"> Sausage
+    <input type="checkbox" name="size" value="mushrooms" ng-model="order.toppings.mushrooms"> Mushrooms
+    <input type="checkbox" name="size" value="onions" ng-model="order.toppings.onions"> Onions
+    <input type="checkbox" name="size" value="peppers" ng-model="order.toppings.peppers"> Peppers
+    <input type="checkbox" name="size" value="pineapple" ng-model="order.toppings.pineapple"> Pineapple
   </div>
-
-<div class="">
-  <label for="size">Toppings</label>
-  Pepperoni<input type="checkbox" name="size" value="pepperoni" ng-model="order.toppings.pepperoni">
-  Sausage<input type="checkbox" name="size" value="sausage" ng-model="order.toppings.sausage">
-  Mushrooms<input type="checkbox" name="size" value="mushrooms" ng-model="order.toppings.mushrooms">
-  Onions<input type="checkbox" name="size" value="onions" ng-model="order.toppings.onions">
-  Peppers<input type="checkbox" name="size" value="peppers" ng-model="order.toppings.peppers">
-  Pineapple<input type="checkbox" name="size" value="pineapple" ng-model="order.toppings.pineapple">
+</div>
+  <input type="submit" class = "btn btn-primary" value="Add Pizza">
+  </form>
 </div>
 
-<input type="submit" name="" value="Add Pizza">
-</form>
 
-
-
-<p>{{order.size}}</p>
-<p>{{order.toppings}}</p>
+<!-- <p>{{order.size}}</p>
+<p>{{order.toppings}}</p> -->
