@@ -21,9 +21,11 @@ var confirmPizza = function($index) {
   deletePizza($index);
 };
 
+
 var total = function(pizzaObject){
-  for(var i = 0; confirmedArray.length; i++){
-    var allTotal = pizzaObject.cost + allTotal;
+  var allTotal = 0;
+  for(var i = 0; i < pizzaObject.confirmedArray.length; i++){
+    allTotal = pizzaObject.confirmedArray[i].cost + allTotal;
     console.log(allTotal);
   }
 };
