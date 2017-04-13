@@ -23,4 +23,11 @@
 
 .form-group {
   font-size: 25px;
+
+.navbar-btn {
+  min-width: 120px;
+}
+
+a {
+  color: white;
 }
