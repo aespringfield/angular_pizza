@@ -40,12 +40,28 @@ myApp.controller('OrderController', ['PizzaOvenService', function(PizzaOvenServi
     var toppingsArray = createToppingsArray(order);
     console.log(toppingsArray);
     // var pizzaCopy = angular.copy(order);
+    var cost = function(pizza){
+      switch (pizza.size) {
+        case "small":
+          return 6;
+          case "medium":
+          return 7;
+          case "large":
+          return 8;
+      }
+    };
     var pizza = {
       size : order.size,
-      toppings : toppingsArray
+      toppings : toppingsArray,
+      cost: cost(order) + toppingsCalc(toppingsArray)
     };
     addPizza(pizza);
     clearStuff();
   };
 
+  var toppingsCalc = function(toppings){
+    var toppingCost = toppings.length;
+  
+    return toppingCost;
+  };
 }]);

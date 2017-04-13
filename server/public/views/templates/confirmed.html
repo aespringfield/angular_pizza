@@ -1,0 +1,18 @@
+<div ng-repeat = "pizza in confirmed.pizzaObject.confirmedArray">
+  <div class="order well col-md-4">
+  <p><b>Size: </b>{{ pizza.size }}</p>
+  <p><b>Toppings: </b></p>
+  <ul>
+    <li ng-repeat="topping in pizza.toppings track by $index">
+      {{topping}}
+    </li>
+  </ul>
+  <p><b>Cost: </b>{{ pizza.cost }}</p>
+
+</div>
+</div>
+
+<div ng-init="confirmed.total(pizza)">
+  <p>{{total}}</p>
+
+</div>

@@ -21,10 +21,17 @@ var confirmPizza = function($index) {
   deletePizza($index);
 };
 
+var total = function(pizzaObject){
+  for(var i = 0; confirmedArray.length; i++){
+    var allTotal = pizzaObject.cost + allTotal;
+    console.log(allTotal);
+  }
+};
   return {
     addPizza : addPizza,
     pizzaObject : pizzaObject,
     deletePizza : deletePizza,
-    confirmPizza : confirmPizza
+    confirmPizza : confirmPizza,
+    total : total
   };
 });

@@ -8,6 +8,7 @@
         {{topping}}
       </li>
     </ul>
+    <p><b>Cost: </b>{{ pizza.cost }}</p>
   <button type="button" class = "btn btn-primary" ng-click = "cart.confirmPizza($index)">Confirm</button>
   <button type="button" class = "btn btn-danger" ng-click ="cart.deletePizza($index)" >Delete</button>
 
