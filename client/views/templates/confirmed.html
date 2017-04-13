@@ -7,12 +7,12 @@
       {{topping}}
     </li>
   </ul>
-  <p><b>Cost: </b>{{ pizza.cost }}</p>
+  <p><b>Cost: </b>${{ pizza.cost }}</p>
 
 </div>
 </div>
 
-<div ng-init="confirmed.total(pizza)">
-  <p>{{total}}</p>
+<div ng-init="confirmed.setTotal(confirmed.pizzaObject)">
+  <p>${{confirmed.totalCost}}</p>
 
 </div>

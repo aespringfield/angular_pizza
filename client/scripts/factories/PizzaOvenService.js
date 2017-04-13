@@ -28,12 +28,14 @@ var total = function(pizzaObject){
     allTotal = pizzaObject.confirmedArray[i].cost + allTotal;
     console.log(allTotal);
   }
+  return allTotal;
 };
   return {
     addPizza : addPizza,
     pizzaObject : pizzaObject,
     deletePizza : deletePizza,
     confirmPizza : confirmPizza,
-    total : total
+    total : total,
+    
   };
 });
