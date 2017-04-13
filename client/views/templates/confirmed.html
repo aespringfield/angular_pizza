@@ -1,20 +1,19 @@
 <div class="row">
-  <div ng-repeat="pizza in confirmed.pizzaObject.confirmedArray">
-    <div class="order well col-md-4">
-      <p><b>Size: </b>{{ pizza.size }}</p>
-      <p><b>Toppings: </b></p>
-      <ul>
-        <li ng-repeat="topping in pizza.toppings track by $index">
-          {{topping}}
-        </li>
-      </ul>
+  <div class="well" ng-hide="confirmed.totalCost">
+    <p>You haven't ordered anything. Please figure out your life.</p>
+  </div>
+  <h2 ng-show="confirmed.totalCost">Your order:</h2>
+  <div ng-repeat="pizza in confirmed.pizzaObject.confirmedArray" ng-show="confirmed.totalCost">
+    <div class="well">
+      <p><b>1 {{pizza.size}} pizza</b> with {{confirmed.toppingsToString(pizza.toppings)}}</p>
       <p><b>Cost: </b>${{ pizza.cost }}</p>
     </div>
   </div>
 </div>
-<div class="row">
-  <div ng-init="confirmed.setTotal(confirmed.pizzaObject)">
-    <p>${{confirmed.totalCost}}</p>
-
+<div class="row" ng-show="confirmed.totalCost">
+  <h2>Check out</h2>
+  <div class="well" ng-init="confirmed.setTotal(confirmed.pizzaObject)">
+    <p><b>Current order total: </b>${{confirmed.totalCost}}</p>
+    <button class="btn btn-primary" ng-click="confirmed.payNow()">Pay now</button>
   </div>
 </div>
