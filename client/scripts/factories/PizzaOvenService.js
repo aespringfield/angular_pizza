@@ -1,6 +1,7 @@
 myApp.factory('PizzaOvenService', function() {
   var pizzaObject = {
-    pizzasArray: []
+    pizzasArray: [],
+    confirmedArray: []
   };
 
 var addPizza = function(pizza) {
@@ -10,13 +11,20 @@ var addPizza = function(pizza) {
 };
 
 var deletePizza = function($index) {
-  console.log($index);
-  pizzaObject.pizzasArray.slice($index, 1);
+  pizzaObject.pizzasArray.splice($index, 1);
+};
+
+var confirmPizza = function($index) {
+  var pizza = pizzaObject.pizzasArray[$index];
+  pizzaObject.confirmedArray.push(pizza);
+  console.log(pizzaObject.confirmedArray);
+  deletePizza($index);
 };
 
   return {
     addPizza : addPizza,
     pizzaObject : pizzaObject,
-    deletePizza : deletePizza
+    deletePizza : deletePizza,
+    confirmPizza : confirmPizza
   };
 });

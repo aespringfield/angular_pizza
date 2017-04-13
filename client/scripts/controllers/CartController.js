@@ -21,5 +21,6 @@ myApp.controller('CartController', ['PizzaOvenService', function(PizzaOvenServic
   };
 
   cart.deletePizza = PizzaOvenService.deletePizza;
+  cart.confirmPizza = PizzaOvenService.confirmPizza;
 
 }]);
