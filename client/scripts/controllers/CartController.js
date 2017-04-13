@@ -17,6 +17,7 @@ myApp.controller('CartController', ['PizzaOvenService', function(PizzaOvenServic
     }
 
     console.log(toppingsArray);
+    return toppingsArray;
 
     // switch (topping) {
     //   case

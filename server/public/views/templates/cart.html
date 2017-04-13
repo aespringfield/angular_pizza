@@ -1,5 +1,11 @@
 <div ng-repeat = "pizza in cart.pizzaObject.pizzasArray">
   <p><b>Size: </b>{{ pizza.size }}</p>
-  <button type="button" name="button" ng-click="cart.createToppingsArray(pizza)">topppp</button>
+  <p><b>Toppings: </b></p>
+  <ul>
+    <li ng-repeat="topping in pizza.toppings track by $index">
+      {{topping}}
+    </li>
+  </ul>
+  <!-- <button type="button" name="button" ng-click="cart.createToppingsArray(pizza)">topppp</button> -->
   <!-- <p><b>Size: </b>{{ for (var key in pizza.toppings) {if (pizza.toppings.key == true) {console.log(key);}} }}</p> -->
 </div>

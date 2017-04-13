@@ -5,6 +5,7 @@ myApp.factory('PizzaOvenService', function() {
 
 var addPizza = function(pizza) {
   pizzaObject.pizzasArray.push(pizza);
+
   console.log(pizzaObject);
 };
   return {
