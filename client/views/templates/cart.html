@@ -1,16 +1,20 @@
 
+  <div class="container">
   <div ng-repeat = "pizza in cart.pizzaObject.pizzasArray">
     <div class="order well col-md-4">
     <p><b>Size: </b>{{ pizza.size }}</p>
+    <div class="toppings-display" ng-show="pizza.toppings.length">
     <p><b>Toppings: </b></p>
-    <ul>
+    <ul class="toppings-list">
       <li ng-repeat="topping in pizza.toppings track by $index">
         {{topping}}
       </li>
     </ul>
+  </div>
     <p><b>Cost: </b>{{ pizza.cost }}</p>
   <button type="button" class = "btn btn-primary" ng-click = "cart.confirmPizza($index)">Confirm</button>
   <button type="button" class = "btn btn-danger" ng-click ="cart.deletePizza($index)" >Delete</button>
 
   </div>
+</div>
 </div>

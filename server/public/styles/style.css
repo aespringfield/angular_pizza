@@ -31,3 +31,7 @@
 a {
   color: white;
 }
+
+.toppings-list {
+  list-style-type: none;
+}
